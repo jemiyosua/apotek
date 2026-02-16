@@ -1,0 +1,27 @@
+/* Gaya untuk container dropdown */
+.dropdown-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Gaya untuk elemen <select> */
+.dropdown-select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+/* Gaya saat hover */
+.dropdown-select:hover {
+    border-color: #2980b9;
+}

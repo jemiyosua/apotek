@@ -1,0 +1,270 @@
+@media only screen and (max-width: 300px) {
+    .txtHeaderStarvoucher1 {
+        font-size:20px;
+        margin:0;
+        font-weight: bold;
+    }
+    .txtHeaderStarvoucher2 {
+        font-size:20px;
+        font-weight: 500;
+    }
+    .txtHeaderStarvoucher3 {
+        font-size:14px;
+        margin:0;
+    }
+    .divHeaderStarvoucher{
+        position: absolute;
+        top: 50%;
+        left:12%;
+        color:white;
+        padding-right: 50px;
+    }
+    .imgXsStarvoucher{
+        height: 600px;
+    }
+    .imgLgStarvoucher{
+        display: none;
+    }
+    .imgMdStarvoucher{
+        display: none;
+    }
+    .divJudulTextStarvoucher{
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .divJudulTextStarvoucher1{
+        font-size: 12px;
+    }
+    
+    .imgStarVoucher{
+        width:100%;
+        max-width:250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .textStarVoucher{
+        width:100%;
+        padding-top:50px;
+    }
+}
+
+@media only screen and (min-width: 301px) and (max-width: 500px) {
+    .txtHeaderStarvoucher1 {
+        font-size:20px;
+        margin:0;
+        font-weight: bold;
+    }
+    .txtHeaderStarvoucher2 {
+        font-size:20px;
+        font-weight: 500;
+    }
+    .txtHeaderStarvoucher3 {
+        font-size:14px;
+        margin:0;
+    }
+    .divHeaderStarvoucher{
+        position: absolute;
+        top: 50%;
+        left:12%;
+        color:white;
+        padding-right: 50px;
+    }
+    /* .imgXsStarvoucher{
+        height: 600px;
+    } */
+    .imgLgStarvoucher{
+        display: none;
+    }
+    .imgMdStarvoucher{
+        display: none;
+    }
+
+    .divJudulTextStarvoucher{
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .divJudulTextStarvoucher1{
+        font-size: 12px;
+    }
+    
+    .imgStarVoucher{
+        width:100%;
+        max-width:250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .textStarVoucher{
+        width:100%;
+        padding-top:50px;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+    .txtHeaderStarvoucher1 {
+        font-size:30px;
+        margin:0;
+        font-weight: bold;
+    }
+    .txtHeaderStarvoucher2 {
+        font-size:30px;
+        font-weight: 500;
+    }
+    .txtHeaderStarvoucher3 {
+        font-size:20px;
+        margin:0;
+    }
+    .divHeaderStarvoucher{
+        position: absolute;
+        top: 50%;
+        left:12%;
+        color:white;
+        padding-right: 50px;
+    }
+    /* .imgXsStarvoucher{
+        height: 600px;
+    } */
+    .imgLgStarvoucher{
+        display: none;
+    }
+    .imgMdStarvoucher{
+        display: none;
+    }
+
+    .divJudulTextStarvoucher{
+        font-size: 30px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .divJudulTextStarvoucher1{
+        font-size: 20px;
+    }
+    
+    .imgStarVoucher{
+        max-width:250px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .textStarVoucher{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .txtHeaderStarvoucher1 {
+        font-size:35px;
+        margin:0;
+        font-weight: bold;
+    }
+    .txtHeaderStarvoucher2{
+        font-size:35px;
+        font-weight: 500;
+    }
+    .txtHeaderStarvoucher3{
+        font-size:20px;
+        margin:0;
+    }
+    .divHeaderStarvoucher{
+        position: absolute;
+        top: 16%;
+        left:62%;
+        color:white;
+        width: 350px;
+    }
+    /* .imgMdStarvoucher{
+        height: 700px;
+    } */
+    .imgLgStarvoucher{
+        display: none;
+    }
+    .imgXsStarvoucher{
+        display: none;
+    }
+
+    .divJudulTextStarvoucher{
+        font-size: 35px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .divJudulTextStarvoucher1{
+        font-size: 20px;
+    }
+    
+    .imgStarVoucher{
+        max-width:250px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .textStarVoucher{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .txtHeaderStarvoucher1 {
+        font-size:35px;
+        margin:0;
+        font-weight: bold;
+    }
+    .txtHeaderStarvoucher2{
+        font-size:35px;
+        font-weight: 500;
+    }
+    .txtHeaderStarvoucher3{
+        font-size:20px;
+        margin:0;
+    }
+    .divHeaderStarvoucher{
+        position: absolute;
+        top: 30%;
+        left:12%;
+        color:white;
+        width: 350px;
+    }
+    .imgMdStarvoucher{
+        display: none;
+    }
+    .imgXsStarvoucher{
+        display: none;
+    }
+    
+    .divJudulTextStarvoucher{
+        font-size: 35px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .divJudulTextStarvoucher1{
+        font-size: 20px;
+    }
+    
+    .imgStarVoucher{
+        width:100%;
+        max-width:250px;
+        float:right;
+    }
+
+    .textStarVoucher{
+        width:50%;
+        padding-top:80px;
+    }
+}

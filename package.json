@@ -1,0 +1,94 @@
+{
+  "name": "apotek",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@supabase/supabase-js": "^2.95.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@tinymce/tinymce-react": "^3.12.6",
+    "@yireen/squoosh-browser": "^1.0.6",
+    "axios": "^0.21.4",
+    "bootstrap": "4.6.0",
+    "compress.js": "^1.2.2",
+    "crypto-js": "^4.1.1",
+    "env-cmd": "^10.1.0",
+    "google-map-react": "^2.2.0",
+    "html-to-image": "^1.11.4",
+    "html2pdf.js": "^0.10.2",
+    "image-file-resize": "^1.0.4",
+    "interweave": "^12.9.0",
+    "jquery": "^3.6.0",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^5.0.7",
+    "md5": "^2.3.0",
+    "mdb-react-ui-kit": "^4.1.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^1.6.0",
+    "react-bootstrap-sweetalert": "^5.2.0",
+    "react-cookie": "^4.0.3",
+    "react-countup": "^6.4.2",
+    "react-datepicker": "^8.7.0",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-google-maps": "^9.4.5",
+    "react-google-recaptcha": "^3.1.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.2.0",
+    "react-image-file-resizer": "^0.4.7",
+    "react-loading-skeleton": "^3.5.0",
+    "react-native-image-preview": "^0.3.1",
+    "react-native-public-ip": "^1.0.2",
+    "react-native-radial-gradient": "^1.1.2",
+    "react-paginate": "^8.1.2",
+    "react-pro-sidebar": "^1.0.0-alpha.9",
+    "react-qrcode-logo": "^2.8.0",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
+    "react-slideshow-image": "^4.0.4",
+    "react-super-responsive-table": "^5.2.0",
+    "react-table": "^7.8.0",
+    "react-thumbnail": "^1.0.0",
+    "react-to-print": "^2.14.11",
+    "reactjs-popup": "^2.0.5",
+    "redux": "^4.1.0",
+    "sass": "^1.49.9",
+    "slick-carousel": "^1.8.1",
+    "web-vitals": "^2.1.4",
+    "xlsx": "^0.17.5"
+  },
+  "scripts": {
+    "start": "env-cmd -f .env react-scripts start",
+    "winBuild": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "ajv": "^8.12.0",
+    "ajv-keywords": "^5.1.0"
+  }
+}

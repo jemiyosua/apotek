@@ -1,0 +1,100 @@
+.table-container {
+    max-width: 1000px;
+    /* margin: 40px auto; */
+    /* background: #f5f7f9; */
+    /* padding: 10px; */
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.medicine-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.medicine-table thead {
+  background: #e9edf2;
+}
+
+.medicine-table th {
+  text-align: left;
+  padding: 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #5a6473;
+}
+
+.medicine-table td {
+  padding: 20px 15px;
+  border-bottom: 1px solid #d9dee5;
+  font-size: 16px;
+  color: #2d3748;
+}
+
+.name-cell {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+}
+
+.icon-box {
+    /* width: 50px; */
+    /* height: 50px; */
+    /* background: linear-gradient(135deg, #a0e7e5, #7cdedc); */
+    background-color: #111111;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .qty-box {
+    background: #c7ecee;
+    color: #0f766e;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.subtotal {
+  color: #0f766e;
+  font-weight: bold;
+}
+
+.summary {
+  margin-top: 30px;
+  padding: 20px;
+  background: #eef2f6;
+  border-radius: 15px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.divider {
+  height: 1px;
+  background: #cbd5e1;
+  margin: 15px 0;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.total-amount {
+  color: #0f766e;
+  font-size: 26px;
+}

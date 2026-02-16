@@ -1,0 +1,130 @@
+.payment-card {
+  width: 360px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  font-family: sans-serif;
+}
+
+.payment-header {
+  background: linear-gradient(135deg, #059669, #0d9488);
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-body {
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: #475569;
+}
+
+.minus {
+  color: #ef4444;
+}
+
+hr {
+  border: none;
+  border-top: 1px dashed #e5e7eb;
+  margin: 16px 0;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.total {
+  color: #059669;
+  font-size: 22px;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #cbd5e1;
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.kembalian-box {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  color: #c2410c;
+  margin-bottom: 16px;
+}
+
+.quick-pay {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.quick-pay button {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #f1f5f9;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.quick-pay .pas {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  border: none;
+  background: #94a3b8;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: not-allowed;
+  margin-bottom: 12px;
+}
+
+.btn-primary:enabled {
+  background: #0d9488;
+  cursor: pointer;
+}
+
+.btn-danger {
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  border: none;
+  background: #fef2f2;
+  color: #dc2626;
+  font-weight: 700;
+  cursor: pointer;
+}

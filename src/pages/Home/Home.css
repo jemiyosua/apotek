@@ -1,0 +1,392 @@
+@media only screen and (max-width: 301px){
+    .txtHeaderHome1 {
+        font-weight:bold; 
+        font-size:24px;
+        margin:0;
+    }
+    .txtHeaderHome2 {
+        font-size:18px;
+    }
+    .txtHeaderHome3 {
+        font-size:12px;
+    }
+    .divHeaderHome{
+        position: absolute;
+        top:10px;
+        left:12%;
+        z-index: 10;
+    }
+    .divSearchHome{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    .imgPartner{
+        width: 30px;
+        height:auto;
+        margin: 15px;
+    }
+    .txtJudulHome{
+        text-align: center;
+        padding-left:20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        font-weight: 500;
+        font-size: 24px;
+    }
+    .searchBar{
+        width: 100%;
+        margin-top: 5px;
+        border:none;
+        margin:5px;
+    }
+    .searchKota{
+        width: 100px;
+    }
+    .buttonSearch{
+        width: 80px;
+    }
+    .divSearchBar{
+        width: 100%;
+    }
+    .imgLgHome{
+        display: none;
+    }
+    .imgMdHome{
+        height: 100%;
+        min-height: 250px;
+    }
+    Input:focus{
+        outline: none;
+    } 
+    Select:focus{
+        outline: none;
+    }
+    .txtBanner{
+        color:'black';
+        text-decoration:'underline';
+        font-weight: 400;
+        font-size: 6px;
+        position: absolute; 
+        bottom:5%; 
+        left:6%
+    }
+}
+
+@media only screen and (min-width: 301px) and (max-width: 500px) {
+    .txtHeaderHome1 {
+        font-weight:bold; 
+        font-size:24px;
+        margin:0;
+    }
+    .txtHeaderHome2 {
+        font-size:18px;
+    }
+    .txtHeaderHome3 {
+        font-size:12px;
+    }
+    .divHeaderHome{
+        position: absolute;
+        top:10px;
+        left:12%;
+        z-index: 10;
+    }
+    .divSearchHome{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    .imgPartner{
+        width: 30px;
+        height:30px;
+        margin: 5px;
+    }
+    .txtJudulHome{
+        text-align: center;
+        padding-left:20px;
+        padding-right: 20px;
+        padding-top: 60px;
+        font-weight: 500;
+        font-size: 24px;
+    }
+    .searchBar{
+        width: 100%;
+        margin-top: 5px;
+        border:none;
+        margin:5px;
+    }
+    .searchKota{
+        width: 100px;
+    }
+    .buttonSearch{
+        width: 80px;
+    }
+    .divSearchBar{
+        width: 100%;
+    }
+    .imgLgHome{
+        display: none;
+    }
+    .imgMdHome{
+        height: 100%;
+        min-height: 250px;
+    }
+    Input:focus{
+        outline: none;
+    } 
+    Select:focus{
+        outline: none;
+    }
+    .txtBanner1{
+        text-decoration: underline;
+        font-size: 13px;
+        position: absolute; 
+        bottom:45%; 
+        left:6%
+    }
+    .txtBanner2{
+        text-decoration: underline;
+        font-size: 9px;
+        position: absolute; 
+        bottom:2%; 
+        left:6%;
+        width:300px;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 767px) {
+    .txtHeaderHome1 {
+        font-weight:bold; 
+        font-size:30px;
+        margin:0;
+    }
+    .txtHeaderHome2 {
+        font-size:26px;
+    }
+    .txtHeaderHome3 {
+        font-size:14px;
+    }
+    .divHeaderHome{
+        position: absolute;
+        top: 14%;
+        bottom:50%;
+        left:12%;
+        z-index: 10;
+    }
+    .divSearchHome{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    .imgPartner{
+        width: 40px;
+        height:40px;
+        margin: 15px;
+    }
+    .txtJudulHome{
+        text-align: center;
+        padding-top: 60px;
+        padding-left:20px;
+        padding-right: 20px;
+        font-weight: 500;
+        font-size: 30px;
+    }
+    .searchBar{
+        width: 100%;
+        margin-top: 5px;
+        border:none;
+        margin:5px;
+    }
+    .searchKota{
+        width: 100px;
+    }
+    .buttonSearch{
+        width: 80px;
+    }
+    .divSearchBar{
+        width: 100%;
+    }
+    .imgLgHome{
+        display: none;
+    }
+    .imgMdHome{
+        height: 100%;
+        min-height:250px;
+    }
+    Input:focus{
+        outline: none;
+    } 
+    Select:focus{
+        outline: none;
+    }
+    .txtBanner1{
+        text-decoration: underline;
+        font-size: 13px;
+        position: absolute; 
+        bottom:43%; 
+        left:6%
+    }
+    .txtBanner2{
+        text-decoration: underline;
+        font-size: 9px;
+        position: absolute; 
+        bottom:2%; 
+        left:6%;
+        width:300px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .txtHeaderHome1 {
+        font-weight:bold; 
+        font-size:35px;
+        margin:0;
+    }
+    .txtHeaderHome2{
+        font-size:35px;
+    }
+    .txtHeaderHome3{
+        font-size:20px;
+    }
+    .divHeaderHome{
+        position: absolute;
+        top: 20%;
+        bottom:50%;
+        left:12%;
+    }
+    .divSearchHome{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top:80%;
+        left:12%;
+    }
+    .imgPartner{
+        width: 100px;
+        height:100px;
+        margin: 30px;
+    }
+    .txtJudulHome{
+        text-align: center;
+        padding-top: 60px;
+        padding-left:20px;
+        padding-right: 20px;
+        font-weight: 500;
+        font-size: 40px;
+    }
+    .searchBar{
+        width: 300px;
+        border:none;
+        margin:5px;
+    }
+    .searchKota{
+        width: 200px;
+    }
+    .buttonSearch{
+        width: 150px;
+    }
+    .imgLgHome{
+        display: none;
+    }
+    .imgMdHome{
+        height: 100%;
+        min-height: 250px;
+    }
+    Input:focus{
+        outline: none;
+    } 
+    Select:focus{
+        outline: none;
+    }
+    .txtBanner1{
+        text-decoration: underline;
+        font-size: 13px;
+        position: absolute; 
+        bottom:43%; 
+        left:6%
+    }
+    .txtBanner2{
+        text-decoration: underline;
+        font-size: 13px;
+        position: absolute; 
+        bottom:3%; 
+        left:6%
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .txtHeaderHome1 {
+        font-weight:bold; 
+        font-size:35px;
+        margin: 0;
+    }
+    .txtHeaderHome2{
+        font-size:35px;
+    }
+    .txtHeaderHome3{
+        font-size:20px;
+    }
+    .divHeaderHome{
+        position: absolute;
+        top: 25%;
+        bottom:50%;
+        left:12%;
+    }
+    .divSearchHome{
+        display: block;
+        flex-direction: row;
+        position: absolute;
+        top: 87%;
+        left:18%;
+    }
+    .imgPartner{
+        width: 100px;
+        height: 100px;
+        margin: 30px;
+    }
+    .txtJudulHome{
+        text-align: center;
+        padding-top: 60px;
+        padding-left:20px;
+        padding-right: 20px;
+        font-weight: 500;
+        font-size: 45px;
+    }
+    .searchBar{
+        width: 350px;
+        border:0px;
+        margin:1px;
+    }
+    Input:focus{
+        outline: none;
+    } 
+    Select:focus{
+        outline: none;
+    }
+    .searchKota{
+        width: 250px;
+    }
+    .buttonSearch{
+        width: 250px;
+    }
+    .imgMdHome{
+        display: none;
+    }
+    .txtBanner1{
+        text-decoration: underline;
+        font-size: 13px;
+        position: absolute; 
+        bottom:43%; 
+        left:6%
+    }
+    .txtBanner2{
+        text-decoration: underline;
+        font-size: 13px;
+        position: absolute; 
+        bottom:3%; 
+        left:6%
+    }
+}

@@ -1,0 +1,60 @@
+@media only screen and (max-width: 768px) {
+    .divDetailMerchant {
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    .detailImage{
+        width: 100%; 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px; */
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .divDetailMerchant {
+        padding-left: 20px;
+        padding-top: 10px;
+        display:flex;
+        flex-direction: row;
+    }
+    .detailImage{
+        width: 250px;
+        height: 250px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .divDetailMerchant {
+        padding-left: 20px;
+        padding-top: 10px;
+        display:flex;
+        flex-direction: row;
+    }
+    .detailImage{
+        width: 250px;
+        height: 250px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+}
+
+.popup-content {
+    width: auto !important;
+}
+
+.popup-content > * {
+    width: auto !important;
+}
+
+.divLoader {
+    /* width: 75vw; */
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

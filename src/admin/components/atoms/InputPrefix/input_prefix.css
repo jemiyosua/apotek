@@ -1,0 +1,67 @@
+.currency-input-container {
+  display: flex; /* Use flexbox to align items horizontally */
+  align-items: center; /* Vertically center items */
+  border: 1px solid #ddd; /* Light grey border */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensures content respects border-radius */
+  background-color: white;
+  width: 100%; /* Make it responsive to its parent's width */
+  height: 50px; /* Fixed height for the input field */
+  box-sizing: border-box; /* Include padding/border in element's total width/height */
+}
+
+.currency-prefix {
+  padding: 0 15px; /* Padding around the "Rp" text */
+  font-size: 1em;
+  color: #555; /* Grey color for the prefix */
+  font-weight: bold; /* Make it bold if needed */
+  display: flex; /* Use flex to center text vertically if needed */
+  align-items: center;
+  height: 100%; /* Ensure prefix takes full height of container */
+  white-space: nowrap; /* Prevent "Rp" from wrapping */
+}
+
+.currency-separator {
+  width: 1px; /* Width of the vertical line */
+  height: 70%; /* Height of the line relative to container */
+  background-color: #eee; /* Light grey color for the separator */
+  margin: 0 5px; /* Space around the separator */
+}
+
+.currency-input-field {
+  flex-grow: 1; /* Allows the input field to take up all remaining space */
+  border: none; /* Remove default input border */
+  outline: none; /* Remove outline on focus */
+  padding: 0 15px; /* Padding inside the input field */
+  font-size: 1em;
+  color: #333; /* Text color for input */
+  height: 100%; /* Ensure input takes full height of container */
+  box-sizing: border-box; /* Include padding in element's total width/height */
+}
+
+.currency-input-field::placeholder {
+  color: #999; /* Placeholder text color */
+}
+
+/* Focus style for the entire container when input is focused */
+.currency-input-container:focus-within {
+  border-color: #8a2be2; /* Purple border on focus */
+  box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2); /* Subtle shadow on focus */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+  .currency-input-container {
+    height: 45px; /* Slightly smaller height on mobile */
+  }
+
+  .currency-prefix {
+    padding: 0 12px;
+    font-size: 0.95em;
+  }
+
+  .currency-input-field {
+    padding: 0 12px;
+    font-size: 0.95em;
+  }
+}

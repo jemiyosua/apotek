@@ -1,0 +1,32 @@
+/* Padding kiri submenu item */
+.ps-submenu-content {
+    margin-left: 10px;
+    border-left: 2px solid #eee;
+  }
+
+/* Padding tombol submenu item */
+.ps-submenu-content .ps-menu-button {
+    padding-left: 12px !important;
+}
+
+/* Optional: kecilin font submenu */
+.ps-submenu-content .ps-menu-label {
+    font-size: 15px;
+}
+
+/* Hover effect biar konsisten */
+.ps-submenu-content .ps-menu-button:hover {
+    background-color: #f4f1f8 !important;
+}
+
+@media (max-width: 768px) {
+    .ps-sidebar-root {
+      position: fixed !important;
+      z-index: 9998;
+    }
+  
+    .ps-sidebar-container {
+      box-shadow: 4px 0 12px rgba(0,0,0,0.15);
+    }
+}
+  

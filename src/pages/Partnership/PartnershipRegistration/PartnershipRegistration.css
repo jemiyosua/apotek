@@ -1,0 +1,205 @@
+@media only screen and (max-width: 500px) {
+    .txtHeaderPartnership1 {
+        font-weight:bold; 
+        font-size:24px;
+        margin: 0;
+        color:#61308C;
+
+    }
+    .txtHeaderPartnership2{
+        font-size:24px;
+        color:#61308C;
+    }
+    .txtHeaderPartnership3 {
+        font-size:14px;
+    }
+    .divHeaderPartnership{
+        position: absolute;
+        top: 12%;
+        left:8%;
+        width: 200px;
+    }
+    .txtJudulPartnership{
+        text-align: center;
+        padding-top: 70px;
+        font-weight: 500;
+        font-size: 30px;
+    }
+    #image{
+        margin-top: 20px;
+        box-shadow: 5px 5px 5px 5px gray;
+        font-weight: 400;
+        padding-bottom: 0px;
+        height: 40px;
+        user-select: none;
+        text-decoration:line-through;
+        font-style: italic;
+        font-size: x-large;
+        border: #61308C 2px solid;
+        margin-left: 10px;
+        text-align: center; 
+    }
+    .divBorder{
+        width: 250px;
+        align-items: center;
+    }
+    .divKolom{
+        width: 300px;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+    .txtHeaderPartnership1 {
+        font-weight:bold; 
+        font-size:24px;
+        margin: 0;
+        color:#61308C;
+
+    }
+    .txtHeaderPartnership2{
+        font-size:24px;
+        color:#61308C;
+    }
+    .txtHeaderPartnership3 {
+        font-size:14px;
+    }
+    .divHeaderPartnership{
+        position: absolute;
+        top: 22%;
+        left:8%;
+        width: 200px;
+    }
+    .txtJudulPartnership{
+        text-align: center;
+        padding-top: 70px;
+        font-weight: 500;
+        font-size: 30px;
+    }
+    #image{
+        margin-top: 20px;
+        box-shadow: 5px 5px 5px 5px gray;
+        font-weight: 400;
+        padding-bottom: 0px;
+        height: 40px;
+        user-select: none;
+        text-decoration:line-through;
+        font-style: italic;
+        font-size: x-large;
+        border: #61308C 2px solid;
+        margin-left: 10px;
+        text-align: center; 
+    }
+
+    .divBorder{
+        width: 500px;
+        align-items: center;
+    }
+    .divKolom{
+        width: 450px;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .txtHeaderPartnership1 {
+        font-weight:bold; 
+        font-size:30px;
+        margin: 0;
+        color:#61308C;
+
+    }
+    .txtHeaderPartnership2{
+        font-size:30px;
+        color:#61308C;
+    }
+    .txtHeaderPartnership3{
+        font-size:20px;
+    }
+    .divHeaderPartnership{
+        position: absolute;
+        top: 40%;
+        left:5%;
+    }
+    .txtJudulPartnership{
+        text-align: center;
+        padding-top: 70px;
+        font-weight: 500;
+        font-size: 40px;
+    }
+    #image{
+        margin-top: 20px;
+        box-shadow: 5px 5px 5px 5px gray;
+        font-weight: 400;
+        padding-bottom: 0px;
+        height: 40px;
+        user-select: none;
+        text-decoration:line-through;
+        font-style: italic;
+        font-size: x-large;
+        border: #61308C 2px solid;
+        margin-left: 10px;
+        text-align: center; 
+    }
+
+    .divBorder{
+        width: 500px;
+        align-items: center;
+    }
+    .divKolom{
+        width: 450px;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .txtHeaderPartnership1 {
+        font-weight:bold; 
+        font-size:40px;
+        margin: 0;
+        color:#61308C;
+
+    }
+    .txtHeaderPartnership2{
+        font-size:40px;
+        color:#61308C;
+    }
+    .txtHeaderPartnership3{
+        font-size:20px;
+    }
+    .divHeaderPartnership{
+        position: absolute;
+        top: 50%;
+        left:10%;
+    }
+    .txtJudulPartnership{
+        text-align: center;
+        padding-top: 100px;
+        font-weight: 500;
+        font-size: 45px;
+    }
+
+    #image{
+        margin-top: 20px;
+        box-shadow: 5px 5px 5px 5px gray;
+        font-weight: 400;
+        padding-bottom: 0px;
+        height: 40px;
+        user-select: none;
+        text-decoration:line-through;
+        font-style: italic;
+        font-size: x-large;
+        border: #61308C 2px solid;
+        margin-left: 10px;
+        text-align: center; 
+    }
+
+    .divBorder{
+        width: 500px;
+        align-items: center;
+    }
+    .divKolom{
+        width: 450px;
+        align-items: center;
+    }
+}

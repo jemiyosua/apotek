@@ -1,0 +1,81 @@
+@media only screen and (max-width: 400px) {
+    .divFooterXs{
+        display:block;
+        text-align: left;
+    }
+    .divFooterLg{
+        display:none;
+    }
+    .divFooterFollowUs{
+        color:white;
+        display:flex; 
+        flex-direction:row; 
+        justify-content:flex-start;
+        padding-top: 20px;
+    }
+    .divCopyRight{
+        text-align: left;
+        padding-top: 20px;
+        color:white;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 768px) {
+    .divFooterLg{
+        text-align: left;
+    }
+    .divFooterXs{
+        display:none;
+    }
+    .divFooterFollowUs{
+        color:white;
+        display:flex; 
+        flex-direction:row; 
+        justify-content:flex-start;
+    }
+    .divCopyRight{
+        text-align: left;
+        padding-top: 20px;
+        color:white;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .divFooterLg{
+        display:flex;
+        flex-direction:row; 
+        justify-content:space-between;
+    }
+    .divFooterXs{
+        display:none;
+    }
+    .divFooterFollowUs{
+        color:white;
+        display:flex; 
+        flex-direction:row; 
+        justify-content:flex-start;
+    }
+    .divCopyRight{
+        color:white;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .divFooterLg{
+        display:flex;
+        flex-direction:row; 
+        justify-content:space-between;
+    }
+    .divFooterXs{
+        display:none;
+    }
+    .divFooterFollowUs{
+        color:white;
+        display:flex; 
+        flex-direction:row; 
+        justify-content:flex-start;
+    }
+    .divCopyRight{
+        color:white;
+    }
+}

@@ -1,0 +1,398 @@
+@media only screen and (max-width: 300px){
+    .txtheader1 {
+        font-weight:bold; 
+        font-size:26px;
+    }
+    .txtheader2 {
+        font-size:26px;
+    }
+    .txtheader3 {
+        font-size:14px;
+    }
+    .divHeader{
+        position: absolute;
+        top: 14%;
+        bottom:50%;
+        left:12%;
+        color:white;
+        width: 300px;
+    }
+    .divSearchBar{
+        background-color:#61308C; 
+        position:relative;
+    }
+    .searchBar{
+        width: 100px;
+        margin-top: 5px;
+        border:none;
+        margin:5px;
+    }
+    .searchKota{
+        width: 100px;
+    }
+    .buttonSearch{
+        width: 80px;
+    }
+    .divText{
+        font-size: 12px;
+    }
+    .divJudulText{
+        padding-top: 10px;
+    }
+    .textNama{
+        font-size: 15px;
+        margin:0px;
+    }
+    .textAlamat{
+        font-size: 12px;
+        color:#828282;
+    }
+    .merchantImg{
+        width: 100%;
+        height: 150px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .divKategori{
+        display: none;
+    }
+    .divFilter{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    .divMerchantLg{
+        display:none
+    }
+
+    .divMerchantXs{
+        display:none
+    }
+
+    .divMerchantXXs{
+        display:block
+    }
+
+}
+
+@media only screen and (min-width: 301px) and (max-width: 575px){
+    .txtheader1 {
+        font-weight:bold; 
+        font-size:26px;
+    }
+    .txtheader2 {
+        font-size:26px;
+    }
+    .txtheader3 {
+        font-size:14px;
+    }
+    .divHeader{
+        position: absolute;
+        top: 14%;
+        bottom:50%;
+        left:12%;
+        color:white;
+        width: 300px;
+    }
+    .divSearchBar{
+        background-color:#61308C; 
+        position:relative;
+    }
+    .searchBar{
+        width: 100px;
+        margin-top: 5px;
+        border:none;
+        margin:5px;
+    }
+    .searchKota{
+        width: 100px;
+    }
+    .buttonSearch{
+        width: 80px;
+    }
+    .divText{
+        font-size: 12px;
+    }
+    .divJudulText{
+        padding-top: 10px;
+    }
+    .textNama{
+        font-size: 15px;
+        margin:0px;
+    }
+    .textAlamat{
+        font-size: 12px;
+        color:#828282;
+    }
+    .merchantImg{
+        width: 100%;
+        height: 150px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .divKategori{
+        display: none;
+    }
+    .divFilter{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    .divMerchantLg{
+        display:none
+    }
+
+    .divMerchantXs{
+        display:block
+    }
+
+    .divMerchantXXs{
+        display:none
+    }
+
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    .txtheader1 {
+        font-weight:bold; 
+        font-size:26px;
+    }
+    .txtheader2 {
+        font-size:26px;
+    }
+    .txtheader3 {
+        font-size:14px;
+    }
+    .divHeader{
+        position: absolute;
+        top: 14%;
+        bottom:50%;
+        left:12%;
+        color:white;
+        width: 300px;
+    }
+    .divSearchBar{
+        background-color:#61308C; 
+        position:relative;
+    }
+    .searchBar{
+        width: 100px;
+        margin-top: 5px;
+        border:none;
+        margin:5px;
+    }
+    .searchKota{
+        width: 100px;
+    }
+    .buttonSearch{
+        width: 80px;
+    }
+    .divText{
+        font-size: 12px;
+    }
+    .divJudulText{
+        padding-top: 10px;
+    }
+    .textNama{
+        font-size: 15px;
+        margin:0px;
+    }
+    .textAlamat{
+        font-size: 12px;
+        color:#828282;
+    }
+    .merchantImg{
+        width: 100%;
+        height: 150px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .divKategori{
+        display: none;
+    }
+    .divFilter{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    .divMerchantLg{
+        display:block
+    }
+
+    .divMerchantXs{
+        display:none
+    }
+
+    .divMerchantXXs{
+        display:none
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .txtheader1 {
+        font-weight:bold; 
+        font-size:35px;
+    }
+    .txtheader2{
+        font-size:35px;
+    }
+    .txtheader3{
+        font-size:20px;
+    }
+    .divHeader{
+        position: absolute;
+        top: 24%;
+        bottom:50%;
+        left:12%;
+        color:white;
+    }
+    .divSearchBar{
+        background-color:#61308C;
+    }
+    .searchBar{
+        width: 300px;
+        border:none;
+        margin:5px;
+    }
+    .searchKota{
+        width: 200px;
+    }
+    .buttonSearch{
+        width: 150px;
+    }
+    .divText{
+        padding-right: 10px;
+        font-size: 14px;
+    }
+    .divJudulText{
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+    .textNama{
+        font-size: 18px;
+        margin:0px;
+    }
+    .textAlamat{
+        font-size: 12px;
+        color:#828282;
+    }
+    .merchantImg{
+        width: 100%;
+        height: 170px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .divFilter{
+        display:none;
+    }
+
+    .divMerchantLg{
+        display:block
+    }
+
+    .divMerchantXs{
+        display:none
+    }
+
+    .divMerchantXXs{
+        display:none
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .txtheader1 {
+        font-weight:bold; 
+        font-size:35px;
+    }
+    .txtheader2{
+        font-size:35px;
+    }
+    .txtheader3{
+        font-size:20px;
+    }
+    .divHeader{
+        position: absolute;
+        top: 25%;
+        bottom:50%;
+        left:12%;
+        color:white;
+    }
+    .divSearchBar{
+        background-color:#61308C;
+    }
+    .searchBar{
+        width: 350px;
+        border:none;
+        margin:5px;
+    }
+    .searchKota{
+        width: 250px;
+    }
+    .buttonSearch{
+        width: 250px;
+    }
+    .divText{
+        padding-left: 10px;
+        padding-top: 10px;
+        font-size: 14px;
+    }
+    .divJudulText{
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    .textNama{
+        font-size: 20px;
+        margin:0px;
+    }
+    .textAlamat{
+        font-size: 14px;
+        color:#828282;
+    }
+    .merchantImg{
+        width: 250px;
+        height: 250px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .divFilter{
+        display:none;
+    }
+    .divMerchantLg{
+        display:block
+    }
+
+    .divMerchantXs{
+        display:none
+    }
+
+    .divMerchantXXs{
+        display:none
+    }
+}
+
+.divLoader{
+    /* width: 75vw; */
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divLoaderMerchant{
+    /* width: 75vw; */
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}

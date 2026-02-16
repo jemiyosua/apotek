@@ -1,0 +1,361 @@
+@media only screen and (max-width: 300px) {
+    .txtheaderDiscount1 {
+        font-weight:bold; 
+        font-size:26px;
+    }
+    .txtheaderDiscount2 {
+        font-size:22px;
+    }
+    .txtheaderDiscount3 {
+        font-size:12px;
+    }
+    .divHeaderDiscount{
+        position: absolute;
+        top: 30px;
+        left:12%;
+        color:white;
+        width: 200px;
+    }
+    .divSearchDiscount{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        justify-content: center;
+        top: 50%;
+        left:9%;
+    }
+    .searchBar{
+        width: 100%;
+        margin-top: 5px;
+        border:none;
+        margin:5px;
+    }
+    .searchKota{
+        width: 100%;
+    }
+    .buttonSearch{
+        align-items: center;
+        justify-content: center;
+    }
+    .divSlideShow{
+        background-color:#61308C;
+        height:200px;
+    }
+    .divJudulLarge{
+        display: none;
+    }
+    .divJudulSmall{
+        display: block;
+    }
+    .divMerchantXSmall{
+        display:flex;
+    }
+    .divMerchantSmall{
+        display:none;
+    }
+    .divMerchantMedium{
+        display:none;
+    }
+    .divMerchantLarge{
+        display:none;
+    }
+    .divSearchBarXs{
+        display:block;
+        background-color: #61308C;
+    }
+    .divSearchBar{
+        display:none;
+    }
+    .divPageLg{
+        display:none;
+    }
+    .divPageXs{
+        display:block;
+    }
+}
+
+@media only screen and (min-width: 301px) and (max-width: 400px) {
+    .txtheaderDiscount1 {
+        font-weight:bold; 
+        font-size:26px;
+    }
+    .txtheaderDiscount2 {
+        font-size:22px;
+    }
+    .txtheaderDiscount3 {
+        font-size:12px;
+    }
+    .divHeaderDiscount{
+        position: absolute;
+        top: 30px;
+        left:12%;
+        color:white;
+        width: 200px;
+    }
+    .divSearchDiscount{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        justify-content: center;
+        top: 50%;
+        left:9%;
+    }
+    .searchBar{
+        width: 100%;
+        margin-top: 5px;
+        border:none;
+        margin:5px;
+    }
+    .searchKota{
+        width: 100%;
+    }
+    .buttonSearch{
+        align-items: center;
+        justify-content: center;
+    }
+    .divSlideShow{
+        background-color:#61308C;
+        height:200px;
+    }
+    .divJudulLarge{
+        display: none;
+    }
+    .divJudulSmall{
+        display: block;
+    }
+    .divMerchantXSmall{
+        display:none;
+    }
+    .divMerchantSmall{
+        display:flex;
+    }
+    .divMerchantMedium{
+        display:none;
+    }
+    .divMerchantLarge{
+        display:none;
+    }
+    .divSearchBarXs{
+        display:block;
+        background-color: #61308C;
+    }
+    .divSearchBar{
+        display:none;
+    }
+    .divPageLg{
+        display:none;
+    }
+    .divPageXs{
+        display:block;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 767px) {
+    .txtheaderDiscount1 {
+        font-weight:bold; 
+        font-size:26px;
+    }
+    .txtheaderDiscount2 {
+        font-size:26px;
+    }
+    .txtheaderDiscount3 {
+        font-size:14px;
+    }
+    .divHeaderDiscount{
+        position: absolute;
+        top: 25%;
+        left:12%;
+        color:white;
+        width: 300px;
+    }
+    .divSearchDiscount{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        justify-content: center;
+        top: 50%;
+        left:9%;
+    }
+    .searchBar{
+        width: 100px;
+        margin-top: 5px;
+        border:none;
+        margin:5px;
+    }
+    .searchKota{
+        width: 100px;
+    }
+    .buttonSearch{
+        width: 80px;
+    }
+    .divSlideShow{
+        background-color:#61308C;
+        height:200px;
+    }
+    .divJudulLarge{
+        display: none;
+    }
+    .divJudulSmall{
+        text-align: left;
+    }
+    .divMerchantXSmall{
+        display:none;
+    }
+    .divMerchantSmall{
+        display:none;
+    }
+    .divMerchantMedium{
+        display:flex;
+    }
+    .divMerchantLarge{
+        display:none;
+    }
+    .divSearchBarXs{
+        display:none;
+    }
+    .divPageLg{
+        display:block;
+    }
+    .divPageXs{
+        display:none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .txtheaderDiscount1 {
+        font-weight:bold; 
+        font-size:35px;
+    }
+    .txtheaderDiscount2{
+        font-size:35px;
+    }
+    .txtheaderDiscount3{
+        font-size:20px;
+    }
+    .divHeaderDiscount{
+        position: absolute;
+        top: 30%;
+        bottom:50%;
+        left:12%;
+        color:white;
+    }
+    .divSearchDiscount{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top:80%;
+        left:12%;
+    }
+    .searchBar{
+        width: 300px;
+        border:none;
+        margin:5px;
+    }
+    .searchKota{
+        width: 200px;
+    }
+    .buttonSearch{
+        width: 150px;
+    }
+    .divSlideShow{
+        background-color:#61308C;
+        height:300px;
+    }
+    .divJudulSmall{
+        display: none;
+    }
+    .divMerchantXSmall{
+        display:none;
+    }
+    .divMerchantSmall{
+        display:none;
+    }
+    .divMerchantMedium{
+        display:flex;
+    }
+    .divMerchantLarge{
+        display:none;
+    }
+    .divSearchBarXs{
+        display:none;
+    }
+    .divPageLg{
+        display:block;
+    }
+    .divPageXs{
+        display:none;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .txtheaderDiscount1 {
+        font-weight:bold; 
+        font-size:35px;
+    }
+    .txtheaderDiscount2{
+        font-size:35px;
+    }
+    .txtheaderDiscount3{
+        font-size:20px;
+    }
+    .divHeaderDiscount{
+        position: absolute;
+        top: 40%;
+        left:12%;
+        color:white;
+    }
+    .divSearchDiscount{
+        display: block;
+        flex-direction: row;
+        position: absolute;
+        top: 87%;
+        left:18%;
+    }
+    .searchBar{
+        width: 350px;
+        border:none;
+        margin:5px;
+    }
+    .searchKota{
+        width: 250px;
+    }
+    .buttonSearch{
+        width: 250px;
+    }
+    .divSlideShow{
+        background-color:#61308C;
+        height:390px;
+    }
+    .divJudulSmall{
+        display: none;
+    }
+    .divMerchantXSmall{
+        display:none;
+    }
+    .divMerchantSmall{
+        display:none;
+    }
+    .divMerchantMedium{
+        display:none;
+    }
+    .divMerchantLarge{
+        display:flex;
+    }
+    .divSearchBarXs{
+        display:none;
+    }
+    .divPageLg{
+        display:block;
+    }
+    .divPageXs{
+        display:none;
+    }
+}
+
+.divLoader {
+    /* width: 75vw; */
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

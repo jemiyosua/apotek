@@ -1,0 +1,51 @@
+/* Container for the switch */
+.switch-container {
+    display: inline-block; /* Allows side-by-side if needed */
+    vertical-align: middle;
+    margin: 10px; /* Example margin */
+}
+
+/* Visually hide the actual checkbox input */
+.switch-checkbox {
+    display: none;
+}
+
+/* Style the label to be the track of the switch */
+.switch-label {
+    display: block;
+    width: 50px; /* Width of the switch track */
+    height: 28px; /* Height of the switch track */
+    background-color: #ccc; /* Default background (off state) */
+    border-radius: 28px; /* Half of height for rounded ends */
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+/* Style the slider (the circle/thumb) */
+.switch-slider {
+	position: absolute;
+	top: 2px; /* Position from top */
+	left: 2px; /* Position from left (off state) */
+	width: 24px; /* Width of the slider */
+	height: 24px; /* Height of the slider */
+	background-color: white; /* Color of the slider */
+	border-radius: 50%; /* Make it a circle */
+	transition: transform 0.3s ease; /* Smooth transition for movement */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for the thumb */
+}
+
+/* Styles when the checkbox is checked (ON state) */
+.switch-checkbox:checked + .switch-label {
+  	background-color: #6a5acd; /* Purple background (on state) - similar to your image */
+}
+
+.switch-checkbox:checked + .switch-label .switch-slider {
+  	transform: translateX(22px); /* Move slider to the right (50px - 24px - 2px - 2px = 22px) */
+  	/* Calculation: (track_width - slider_width - left_padding - right_padding) */
+}
+
+/* Optional: Focus style for accessibility */
+.switch-checkbox:focus + .switch-label {
+  	box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.5); /* Purple outline on focus */
+}
