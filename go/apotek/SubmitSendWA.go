@@ -11,6 +11,7 @@ import (
 	"os"
 	"regexp"
 	"runtime"
+	"strconv"
 	"strings"
 	"time"
 
@@ -25,10 +26,30 @@ type JSubmitSendWARequest struct {
 	NomorTujuan string
 	URLUpload string
 	FileName string
+	SubTotalHarga int
+	Diskon int
+	PPN float64
+	TotalHarga float64
+	TotalBayar int
+	Kembalian float64
+	MetodePembayaran string
+	Kasir string
+	TransaksiDetail []JTransaksiDetailSendWARequest
 	Page        int
 	RowPage     int
 	OrderBy     string
 	Order       string
+}
+
+type JTransaksiDetailSendWARequest struct {
+	IdObat int
+	IdSupplier int
+	KodeObat string
+	NamaObat string
+	Jumlah int
+	HargaSatuan int
+	SubTotal int
+	Supplier string
 }
 
 type JSubmitSendWAResponse struct {
@@ -127,6 +148,14 @@ func SubmitSendWA(c *gin.Context) {
 			nomorTujuan := jSubmitSendWARequest.NomorTujuan
 			urlUpload := jSubmitSendWARequest.URLUpload
 			fileName := jSubmitSendWARequest.FileName
+			subTotalHarga := jSubmitSendWARequest.SubTotalHarga
+			diskon := jSubmitSendWARequest.Diskon
+			ppn := jSubmitSendWARequest.PPN
+			totalHarga := jSubmitSendWARequest.TotalHarga
+			totalBayar := jSubmitSendWARequest.TotalBayar
+			kembalian := jSubmitSendWARequest.Kembalian
+			metodePembayaran := jSubmitSendWARequest.MetodePembayaran
+			kasir := jSubmitSendWARequest.Kasir
 			page := jSubmitSendWARequest.Page
 			rowPage := jSubmitSendWARequest.RowPage
 
@@ -234,6 +263,85 @@ func SubmitSendWA(c *gin.Context) {
 				responseStatusWA := jSubmitSendWAResponse.Status
 
 				if responseStatusWA == 200 {
+					maxCounter := 0
+					query := "SELECT IFNULL(MAX(counter), 0) FROM db_transaksi WHERE tgl_transaksi >= DATE_FORMAT(NOW(), '%Y-%m-01') AND tgl_transaksi <  DATE_ADD(DATE_FORMAT(NOW(), '%Y-%m-01'), INTERVAL 1 MONTH);"
+					if err := db.QueryRow(query).Scan(&maxCounter); err != nil {
+						errorCode := "1"
+						errorMessage := "Error running, " + err.Error()
+						dataLogSubmitSendWA(username, errorCode, errorMessage, totalRecords, totalPage, method, path, ip, logData, allHeader, bodyJson, c)
+						return
+					}
+					maxCounter += 1
+					counterFormatted := fmt.Sprintf("%03d", maxCounter)
+
+					suffix := "TRX"
+					part1 := helper.GetDate("dmYhis")
+					part2, _ := helper.GenerateRandomString(4)
+					trxId := fmt.Sprintf("%s-%s-%s", suffix, part1, part2)
+
+					// INV/2026/02/08/001
+					suffixInv := "INV"
+					year := startTime.Year()
+					month := startTime.Month()
+					monthString := helper.GetMonthInt(month.String())
+					day := startTime.Day()
+					dayString := strconv.Itoa(day)
+					dayStringNew := ""
+					if day < 10 {
+						dayStringNew = "0" + dayString
+					} else {
+						dayStringNew = dayString
+					}
+
+					nomorInvoice := fmt.Sprintf("%s/%d/%s/%s/%s", suffixInv, year, monthString, dayStringNew, counterFormatted)
+
+					query1 := fmt.Sprintf("INSERT INTO db_transaksi (trx_id, tgl_transaksi, subtotal_harga, diskon, ppn, total_harga, total_bayar, kembalian, metode_pembayaran, kasir, counter, nomor_invoice) VALUES ('%s',NOW(),'%d','%d','%f','%f','%d','%f','%s','%s','%d','%s')", trxId, subTotalHarga, diskon, ppn, totalHarga, totalBayar, kembalian, metodePembayaran, kasir, maxCounter, nomorInvoice)
+					_, err1 := db.Exec(query1)
+					if err1 != nil {
+						errorCode := "1"
+						errorMessage := fmt.Sprintf("Error running %q: %+v", query1, err1)
+						dataLogSubmitSendWA(username, errorCode, errorMessage, totalRecords, totalPage, method, path, ip, logData, allHeader, bodyJson, c)
+						return
+					}
+
+					listDetailTransaksi := jSubmitSendWARequest.TransaksiDetail
+					for _, item := range listDetailTransaksi {
+
+						idObat := item.IdObat
+						idSupplier := item.IdSupplier
+						kodeObat := item.KodeObat
+						namaObat := item.NamaObat
+						jumlah := item.Jumlah
+						hargaSatuan := item.HargaSatuan
+						subTotal := item.SubTotal
+						supplier := item.Supplier
+
+						query := fmt.Sprintf("INSERT INTO db_transaksi_detail (trx_id, kode_obat, id_obat, id_supplier, nama_obat, jumlah, harga_satuan, sub_total, supplier, tgl_input) VALUES ('%s','%s','%d','%d','%s','%d','%d','%d','%s', NOW())", trxId, kodeObat, idObat, idSupplier, namaObat, jumlah, hargaSatuan, subTotal, supplier)
+						_, err := db.Exec(query)
+						if err != nil {
+							errorCode := "1"
+							errorMessage := fmt.Sprintf("Error running %q: %+v", query, err)
+							dataLogSubmitSendWA(username, errorCode, errorMessage, totalRecords, totalPage, method, path, ip, logData, allHeader, bodyJson, c)
+						}
+
+						stokNow := 0
+						query2 := fmt.Sprintf("SELECT stok FROM db_supplier_obat WHERE id_obat = %d AND id_supplier = %d", idObat, idSupplier)
+						if err2 := db.QueryRow(query2).Scan(&stokNow); err != nil {
+							errorCode := "1"
+							errorMessage := fmt.Sprintf("Error running %q: %+v", query2, err2)
+							dataLogSubmitSendWA(username, errorCode, errorMessage, totalRecords, totalPage, method, path, ip, logData, allHeader, bodyJson, c)
+						}
+
+						stokUpdate := stokNow - jumlah
+						query3 := fmt.Sprintf("UPDATE db_supplier_obat SET stok = %d WHERE id_obat = %d AND id_supplier = %d ", stokUpdate, idObat, idSupplier)
+						_, err3 := db.Exec(query3)
+						if err3 != nil {
+							errorCode := "1"
+							errorMessage := fmt.Sprintf("Error running %q: %+v", query3, err3)
+							dataLogSubmitSendWA(username, errorCode, errorMessage, totalRecords, totalPage, method, path, ip, logData, allHeader, bodyJson, c)
+						}
+					}
+
 					dataLogSubmitSendWA(username, "0", "", totalRecords, totalPage, method, path, ip, logData, allHeader, bodyJson, c)
 					return
 				} else {

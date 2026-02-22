@@ -81,6 +81,8 @@ const PenjualanObat = () => {
     const [EmailForExport, setEmailForExport] = useState("")
     const [EmailFilled, setEmailFilled] = useState("")
 
+    const [IdObat, setIdObat] = useState("")
+    const [IdSupplier, setIdSupplier] = useState("")
     const [KodeObat, setKodeObat] = useState("")
     const [NamaObat, setNamaObat] = useState("")
     const [Supplier, setSupplier] = useState("")
@@ -192,11 +194,14 @@ const PenjualanObat = () => {
             });
             setCart(updatedCart);
         } else {
+            console.log("IdSupplier : ", IdSupplier)
             const newItem = {
+                IdObat,
+                IdSupplier,
                 KodeObat,
                 NamaObat,
                 Jumlah: parseInt(Jumlah),
-                HargaSatuan,
+                HargaSatuan: parseInt(HargaSatuan),
                 SubTotal: parseInt(Jumlah) * HargaSatuan,
                 Supplier
             };
@@ -212,6 +217,8 @@ const PenjualanObat = () => {
     };
 
     useEffect(() => {
+        // console.log(JSON.stringify(Cart))
+
         setCookie('varCookieCart', Cart, { path: '/' })
         let subTotal = 0
         Cart.map((item,index) => {
@@ -664,6 +671,16 @@ const PenjualanObat = () => {
         }
     }
 
+    // SubTotalHarga int
+	// Diskon int
+	// PPN int
+	// TotalHarga int
+	// TotalBayar int
+	// Kembalian int
+	// MetodePembayaran string
+	// Kasir string
+	// TransaksiDetail []JTransaksiDetailSendWARequest
+
     const handleSubmitSendWA = (nomorTujuan, publicUrl, fileName) => {
         let CookieParamKey = getCookie("paramkey")
         let CookieUserID = getCookie("userid")
@@ -674,7 +691,14 @@ const PenjualanObat = () => {
             "Method": "INSERT",
             "NomorTujuan": nomorTujuan,
             "URLUpload": publicUrl,
-            "FileName": fileName
+            "FileName": fileName,
+            "SubTotalHarga": SubTotalCheckout,
+            "Diskon": 0,
+            "PPN": PPN,
+            "TotalHarga": TotalBayarCart,
+            "TotalBayar": parseInt(NominalBayar),
+            "kembalian": Kembalian,
+            "TransaksiDetail": Cart
         })
 
         var enckey = paths.EncKey
@@ -787,8 +811,11 @@ const PenjualanObat = () => {
                                     />
                                     <ul>
                                         {ShowDropdown && ListObat?.map((item) => (
-                                        <li key={item.id} style={{ borderBottom: '1px solid #ccc', padding: '10px 0', cursor:'pointer' }} onClick={() => {
+                                        <li key={item.Id} style={{ borderBottom: '1px solid #ccc', padding: '10px 0', cursor:'pointer' }} onClick={() => {
                                             setShowDropdown(false)
+                                            setIdObat(item.IdObat)
+                                            setIdSupplier(item.IdSupplier)
+                                            setKodeObat(item.KodeObat)
                                             setNamaObat(item.NamaObat)
                                             setHargaSatuan(item.HargaObat)
                                             setSupplier(item.NamaSupplier)
@@ -796,6 +823,7 @@ const PenjualanObat = () => {
                                             <strong>Nama Obat: {item.NamaObat}</strong> <br />
                                             <div style={{ fontSize:12 }}>Supplier: <span style={{ fontWeight:'bold' }}>{item.NamaSupplier}</span></div>
                                             <div style={{ fontSize:12 }}>Harga: <span style={{ color:'blue', fontWeight:'bold' }}>Rp{item.HargaObat}</span></div>
+                                            <div style={{ fontSize:12 }}>Stok: <span style={{ color:'red', fontWeight:'bold' }}>{item.Stok}</span></div>
                                             <div style={{ fontSize:12 }}>Status: <span style={{ color: item.StatusObat == '1' ? 'green' : 'red', fontWeight:'bold' }}>{item.StatusObat == "1" ? "Aktif" : "Tidak Aktif"}</span></div>
                                         </li>
                                         ))}
@@ -917,6 +945,7 @@ const PenjualanObat = () => {
                             />
                             
                         </div>
+                        
                     </div>
                 </div>
             </div>

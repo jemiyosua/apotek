@@ -25,6 +25,7 @@ type JSupplierObatRequest struct {
 	Method   string
 	Id       int
 	NamaObat       string
+	SupplierId int
 	Page     int
 	RowPage  int
 	OrderBy  string
@@ -33,10 +34,13 @@ type JSupplierObatRequest struct {
 
 type JSupplierObatResponse struct {
 	Id            int
+	IdObat            int
+	IdSupplier            int
 	KodeObat  string
 	NamaObat  string
 	KodeSupplier  string
 	NamaSupplier     string
+	Stok     string
 	HargaObat         string
 	StatusObat        int
 }
@@ -131,6 +135,7 @@ func SupplierObat(c *gin.Context) {
 			method := jSupplierObatRequest.Method
 			id := jSupplierObatRequest.Id
 			namaObat := jSupplierObatRequest.NamaObat
+			supplierId := jSupplierObatRequest.SupplierId
 			page := jSupplierObatRequest.Page
 			rowPage := jSupplierObatRequest.RowPage
 
@@ -181,7 +186,7 @@ func SupplierObat(c *gin.Context) {
 				pageNowString := strconv.Itoa(pageNow)
 				queryLimit := ""
 
-				queryWhere := " a.id_obat = b.id AND a.id_supplier = c.id "
+				queryWhere := " a.id_obat = b.id AND a.id_supplier = c.id AND b.status = 1 AND stok != 0 "
 
 				if id != 0 {
 					if queryWhere != "" {
@@ -191,13 +196,26 @@ func SupplierObat(c *gin.Context) {
 					queryWhere += fmt.Sprintf(" id = '%d' ", id)
 				}
 
-				if namaObat != "" {
-					if queryWhere != "" {
-						queryWhere += " AND "
+				if supplierId != 0 {
+					if namaObat != "" {
+						if queryWhere != "" {
+							queryWhere += " AND "
+						}
+	
+						queryWhere += fmt.Sprintf(" nama_obat LIKE '%%%s%%' AND id_supplier = '%d' ", namaObat, supplierId)
 					}
+				} else {
+					if namaObat != "" {
+						if queryWhere != "" {
+							queryWhere += " AND "
+						}
 
-					queryWhere += fmt.Sprintf(" nama_obat LIKE '%%%s%%' ", namaObat)
+						queryWhere += fmt.Sprintf(" nama_obat LIKE '%%%s%%' ", namaObat)
+					}
 				}
+
+				queryGroupBy := " GROUP BY a.id_obat, nama_obat "
+				queryOrder := " ORDER BY a.tgl_input DESC "
 
 				if queryWhere != "" {
 					queryWhere = " WHERE " + queryWhere
@@ -205,7 +223,7 @@ func SupplierObat(c *gin.Context) {
 
 				totalRecords = 0
 				totalPage = 0
-				query := fmt.Sprintf("SELECT COUNT(1) AS cnt FROM db_supplier_obat a, db_obat b, db_supplier c %s", queryWhere)
+				query := fmt.Sprintf("SELECT COUNT(1) AS cnt FROM db_supplier_obat a, db_obat b, db_supplier c %s %s", queryWhere, queryGroupBy)
 				if err := db.QueryRow(query).Scan(&totalRecords); err != nil {
 					errorMessage = "Error running, " + err.Error()
 					dataLogSupplierObat(jSupplierObatResponses, username, errorCode, errorMessage, totalRecords, totalPage, method, path, ip, logData, allHeader, bodyJson, c)
@@ -222,8 +240,7 @@ func SupplierObat(c *gin.Context) {
 				}
 
 				// ---------- start query get menu ----------
-				query1 := fmt.Sprintf("SELECT a.id, kode_obat, nama_obat, kode_supplier, supplier, harga, b.status FROM db_supplier_obat a, db_obat b, db_supplier c %s %s", queryWhere, queryLimit)
-				fmt.Println(query1)
+				query1 := fmt.Sprintf("SELECT a.id, a.id_obat, a.id_supplier, kode_obat, nama_obat, kode_supplier, supplier, stok, MAX(harga) AS harga_tertinggi, b.status FROM db_supplier_obat a, db_obat b, db_supplier c %s %s %s %s", queryWhere, queryGroupBy, queryOrder, queryLimit)
 				rows, err := db.Query(query1)
 				defer rows.Close()
 				if err != nil {
@@ -234,10 +251,13 @@ func SupplierObat(c *gin.Context) {
 				for rows.Next() {
 					err = rows.Scan(
 						&jSupplierObatResponse.Id,
+						&jSupplierObatResponse.IdObat,
+						&jSupplierObatResponse.IdSupplier,
 						&jSupplierObatResponse.KodeObat,
 						&jSupplierObatResponse.NamaObat,
 						&jSupplierObatResponse.KodeSupplier,
 						&jSupplierObatResponse.NamaSupplier,
+						&jSupplierObatResponse.Stok,
 						&jSupplierObatResponse.HargaObat,
 						&jSupplierObatResponse.StatusObat,
 					)
