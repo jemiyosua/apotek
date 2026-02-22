@@ -59,3 +59,38 @@ create table db_transaksi_temp
 INSERT INTO db_apotek.db_transaksi_temp (id, nama, json_transaksi, tgl_input) VALUES (2, 'jemi', '[{"KodeObat":"","NamaObat":"Paracetamol 500mg","Jumlah":100,"HargaSatuan":"4000","SubTotal":400000,"Supplier":"PT Sanbe Farma"},{"KodeObat":"","NamaObat":"Amoxicillin 500mg","Jumlah":20,"HargaSatuan":"10000","SubTotal":200000,"Supplier":"PT Sanbe Farma"}]', '2026-02-15 16:18:02');
 INSERT INTO db_apotek.db_transaksi_temp (id, nama, json_transaksi, tgl_input) VALUES (3, 'yosua', '[{"KodeObat":"","NamaObat":"Paracetamol 500mg","Jumlah":100,"HargaSatuan":"4000","SubTotal":400000,"Supplier":"PT Sanbe Farma"},{"KodeObat":"","NamaObat":"Amoxicillin 500mg","Jumlah":20,"HargaSatuan":"10000","SubTotal":200000,"Supplier":"PT Sanbe Farma"}]', '2026-02-15 16:19:53');
 
+-- DB TRANSAKSI --
+create table db_transaksi
+(
+    id                int auto_increment
+        primary key,
+    trx_id            varchar(50)  null,
+    tgl_transaksi     datetime     null,
+    subtotal_harga    int          null,
+    diskon            int          null,
+    ppn               int          null,
+    total_harga       int          null,
+    total_bayar       int          null,
+    kembalian         int          null,
+    metode_pembayaran varchar(100) null,
+    kasir             varchar(100) null,
+    counter           int          null,
+    nomor_invoice     varchar(100) null
+);
+
+-- DB TRANSAKSI DETAIL --
+create table db_transaksi_detail
+(
+    id           int auto_increment
+        primary key,
+    trx_id       varchar(100) null,
+    kode_obat    varchar(50)  null,
+    id_obat      int          null,
+    id_supplier  int          null,
+    nama_obat    varchar(500) null,
+    jumlah       int          null,
+    harga_satuan int          null,
+    sub_total    int          null,
+    supplier     varchar(100) null,
+    tgl_input    datetime     null
+);
